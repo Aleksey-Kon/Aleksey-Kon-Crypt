@@ -1,0 +1,16 @@
+﻿<Application x:Class="filecriptwpf.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             
+             xmlns:local="clr-namespace:filecriptwpf"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Включаем системный стиль Fluent -->
+            <ResourceDictionary.MergedDictionaries>
+
+                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
