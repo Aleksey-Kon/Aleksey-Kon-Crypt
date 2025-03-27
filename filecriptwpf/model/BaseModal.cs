@@ -13,14 +13,14 @@ namespace filecriptwpf.model
         {
 
             byte[] valueB = File.ReadAllBytes(value);
-            valueB = AesEncryption.Encrypt(valueB, key);
-            valueB = TripleDesEncryption.Encrypt(valueB, key);
+            valueB = AesEncryption.Encrypt(valueB, SecureHashGenerator.GetSha1Hash(key));
+            valueB = TripleDesEncryption.Encrypt(valueB, SecureHashGenerator.GetSha384Hash(key));
             byte[] keyB = ConvetByte(key);
 
             keyB = CaesarCipher(keyB.ToList(), keyshift).ToArray();
             int maxLength = Math.Max(valueB.Length, keyB.Length);
             List<byte> ExitByte = new List<byte>();
-            ExitByte = ByteXor(maxLength, valueB, keyB);
+            ExitByte = ByteXor(maxLength, valueB, SecureHashGenerator.ComputeSha512Hash(keyB));
             ExitByte = CaesarCipher(ExitByte, shift);
 
             byte[] byteArray = ExitByte.ToArray();
@@ -58,12 +58,12 @@ namespace filecriptwpf.model
 
 
             int maxLength = Math.Max(shiftedBytes.Count, keyB.Length);
-            List<byte> decryptedBytes = ByteXor(maxLength, shiftedBytes.ToArray(), keyB);
+            List<byte> decryptedBytes = ByteXor(maxLength, shiftedBytes.ToArray(), SecureHashGenerator.ComputeSha512Hash(keyB));
 
 
             byte[] byteArrayExit = decryptedBytes.ToArray();
-            byteArrayExit = TripleDesEncryption.Decrypt(byteArrayExit, key);
-            byteArrayExit = AesEncryption.Decrypt(byteArrayExit, key);
+            byteArrayExit = TripleDesEncryption.Decrypt(byteArrayExit, SecureHashGenerator.GetSha384Hash(key));
+            byteArrayExit = AesEncryption.Decrypt(byteArrayExit, SecureHashGenerator.GetSha1Hash(key));
 
 
             string filenew = MainWindow.SaveFileName();

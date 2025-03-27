@@ -66,6 +66,7 @@
     </ApplicationDefinition>
     <Compile Include="model\AesEncryption.cs" />
     <Compile Include="model\BaseModal.cs" />
+    <Compile Include="model\SecureHashGenerator.cs" />
     <Compile Include="model\TripleDesEncryption.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
