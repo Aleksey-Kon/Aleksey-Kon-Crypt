@@ -2,7 +2,7 @@
 using System.IO;
 using System.Security.Cryptography;
 
-
+namespace filecriptwpf.model { 
 public class AesEncryption
 {
     // Метод для шифрования данных
@@ -53,4 +53,5 @@ public class AesEncryption
             }
         }
     }
+}
 }
