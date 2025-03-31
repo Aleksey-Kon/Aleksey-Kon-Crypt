@@ -1,0 +1,223 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|c:\\users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\model\\basemodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|solutionrelative:filecriptwpf\\model\\basemodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\model\\securehashgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|solutionrelative:filecriptwpf\\model\\securehashgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\model\\tripledesencryption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|solutionrelative:filecriptwpf\\model\\tripledesencryption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\model\\aesencryption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|solutionrelative:filecriptwpf\\model\\aesencryption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|solutionrelative:filecriptwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|solutionrelative:filecriptwpf\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
+      "RelativeMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|solutionrelative:filecriptwpf\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|solutionrelative:filecriptwpf\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|filecriptwpf||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|solutionrelative:filecriptwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|solutionrelative:filecriptwpf\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|solutionrelative:filecriptwpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44A22597-A32E-4A06-B487-D925EA58077C}|filecriptwpf\\filecriptwpf.csproj|solutionrelative:filecriptwpf\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 280,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TripleDesEncryption.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\model\\TripleDesEncryption.cs",
+              "RelativeDocumentMoniker": "filecriptwpf\\model\\TripleDesEncryption.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\model\\TripleDesEncryption.cs",
+              "RelativeToolTip": "filecriptwpf\\model\\TripleDesEncryption.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:22:17.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "filecriptwpf\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\MainWindow.xaml",
+              "RelativeToolTip": "filecriptwpf\\MainWindow.xaml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAawBMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-19T09:33:49.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "filecriptwpf\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\MainWindow.xaml.cs",
+              "RelativeToolTip": "filecriptwpf\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAgwAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T08:58:57.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SecureHashGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\model\\SecureHashGenerator.cs",
+              "RelativeDocumentMoniker": "filecriptwpf\\model\\SecureHashGenerator.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\model\\SecureHashGenerator.cs",
+              "RelativeToolTip": "filecriptwpf\\model\\SecureHashGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T14:27:27.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AesEncryption.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\model\\AesEncryption.cs",
+              "RelativeDocumentMoniker": "filecriptwpf\\model\\AesEncryption.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\model\\AesEncryption.cs",
+              "RelativeToolTip": "filecriptwpf\\model\\AesEncryption.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:22:04.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BaseModal.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\model\\BaseModal.cs",
+              "RelativeDocumentMoniker": "filecriptwpf\\model\\BaseModal.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\model\\BaseModal.cs",
+              "RelativeToolTip": "filecriptwpf\\model\\BaseModal.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAFEAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:28:26.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "filecriptwpf",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\filecriptwpf.csproj",
+              "RelativeDocumentMoniker": "filecriptwpf\\filecriptwpf.csproj",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\filecriptwpf.csproj",
+              "RelativeToolTip": "filecriptwpf\\filecriptwpf.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-27T14:28:18.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "filecriptwpf\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\MainWindow.xaml",
+              "RelativeToolTip": "filecriptwpf\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-18T08:59:01.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\App.xaml",
+              "RelativeDocumentMoniker": "filecriptwpf\\App.xaml",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\App.xaml",
+              "RelativeToolTip": "filecriptwpf\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-18T09:58:25.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\App.xaml.cs",
+              "RelativeDocumentMoniker": "filecriptwpf\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\App.xaml.cs",
+              "RelativeToolTip": "filecriptwpf\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T13:25:20.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Settings.settings",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\Properties\\Settings.settings",
+              "RelativeDocumentMoniker": "filecriptwpf\\Properties\\Settings.settings",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\Properties\\Settings.settings",
+              "RelativeToolTip": "filecriptwpf\\Properties\\Settings.settings",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002767|",
+              "WhenOpened": "2025-03-27T15:07:42.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\App.config",
+              "RelativeDocumentMoniker": "filecriptwpf\\App.config",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\App.config",
+              "RelativeToolTip": "filecriptwpf\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-03-27T15:07:54.58Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Styles.xaml",
+              "DocumentMoniker": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\Styles.xaml",
+              "RelativeDocumentMoniker": "filecriptwpf\\Styles.xaml",
+              "ToolTip": "C:\\Users\\acer\\source\\repos\\filecriptwpf\\filecriptwpf\\Styles.xaml",
+              "RelativeToolTip": "filecriptwpf\\Styles.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-19T09:33:30.46Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
