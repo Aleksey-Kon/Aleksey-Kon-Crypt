@@ -1,0 +1,816 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.WPF.Theming.4.6.2</name>
+    </assembly>
+    <members>
+        <member name="T:GrapeCity.Common.LicenseInfoPanel">
+            <summary>
+            Interaction logic for LicenseInfoPanel.xaml
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Common.LicenseInfoPanel.headerPanel">
+            <summary>
+            headerPanel Name Field
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Common.LicenseInfoPanel.headerIcon">
+            <summary>
+            headerIcon Name Field
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Common.LicenseInfoPanel.headerText">
+            <summary>
+            headerText Name Field
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Common.LicenseInfoPanel.bodyText">
+            <summary>
+            bodyText Name Field
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Common.LicenseInfoPanel.bodyLinkPanel">
+            <summary>
+            bodyLinkPanel Name Field
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Common.LicenseInfoPanel.bodyWebLinkBlock">
+            <summary>
+            bodyWebLinkBlock Name Field
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Common.LicenseInfoPanel.bodyWebLink">
+            <summary>
+            bodyWebLink Name Field
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Common.LicenseInfoPanel.bodyWebLinkText">
+            <summary>
+            bodyWebLinkText Name Field
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Common.LicenseInfoPanel.bodyActivateLinkBlock">
+            <summary>
+            bodyActivateLinkBlock Name Field
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Common.LicenseInfoPanel.bodyActivateLink">
+            <summary>
+            bodyActivateLink Name Field
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Common.LicenseInfoPanel.bodyActivateLinkText">
+            <summary>
+            bodyActivateLinkText Name Field
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Common.LicenseInfoPanel.bodyDetailHeader">
+            <summary>
+            bodyDetailHeader Name Field
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Common.LicenseInfoPanel.bodyDetail">
+            <summary>
+            bodyDetail Name Field
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Common.LicenseInfoPanel.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Common.Resources.LicenseResource">
+            <summary>
+              Contains the resource for PowerToolsLicenseProvider
+            </summary>
+        </member>
+        <member name="T:C1.Util.Licensing.ProviderInfo">
+            <summary>
+                <para>Provides static <see cref="M:C1.Util.Licensing.ProviderInfo.Validate(System.Type,System.Object)" /> methods that 
+            should be called from the constructors of licensed classes.</para>
+                <para>Also provides a static <see cref="M:C1.Util.Licensing.ProviderInfo.ShowAboutBox(System.Object)" /> method that can 
+            be called to show the about box with product and licensing information.</para>
+            </summary>
+        </member>
+        <member name="M:C1.Util.Licensing.ProviderInfo.Validate(System.Type,System.Object)">
+            <summary>
+            Perform license validation. Call this method from the licensed object's 
+            constructor to save a license key at design time, validate it at runtime, 
+            and display a nag dialog if a valid license is not found.
+            </summary>
+            <param name="type">Type of licensed object (use typeof() and not GetType()).</param>
+            <param name="instance">Reference to the licensed object (not currently used).</param>
+            <returns>A <see cref="T:C1.Util.Licensing.LicenseInfo" /> object that contains information about the license.</returns>
+            <remarks>
+                <para>Check the <b>ShouldNag</b> property of the returned <see cref="T:C1.Util.Licensing.LicenseInfo" /> 
+            to determine whether the licensed class should nag the user. This value is set
+            to true in situations where a valid license was not found but a nag dialog
+            could not be displayed. In these cases, the licensed class is supposed to nag
+            in some other way (with a watermark for example).</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Util.Licensing.ProviderInfo.Validate(System.Type,System.Object,System.Boolean)">
+            <summary>
+            Perform license validation. Call this method from the licensed object's 
+            constructor to save a license key at design time, validate it at runtime, 
+            and display a nag dialog if a valid license is not found.
+            </summary>
+            <param name="type">Type of licensed object (use typeof() and not GetType()).</param>
+            <param name="instance">Reference to the licensed object (not currently used).</param>
+            <param name="showNagDialog">Whether the nag dialog should be displayed when a valid license is not found.</param>
+            <returns>A <see cref="T:C1.Util.Licensing.LicenseInfo" /> object that contains information about the license.</returns>
+            <remarks>
+                <para>This overload was created for use in WPF. It should be called in the control's constructor
+            in order to support license persistence correctly. But it should not show the nag dialog until the
+            control is fully loaded, or the VS designer may remain blank.</para>
+                <para>So the solution is this:</para>
+                <code>
+            LicenseInfo _licInfo;
+            public LicensedControl()
+            {
+              // check license but don't nag yet
+              _licInfo = ProviderInfo.Validate(typeof(LicensedControl), this, false);
+              
+              // perform licensing after control is fully loaded
+              Loaded += LicensedControl_Loaded;
+            }
+            void LicensedControl_Loaded(object sender, RoutedEventArgs e)
+            {
+              // nag after loading
+              if (_licInfo.ShouldNag)
+              {
+                ProviderInfo.ShowAboutBox(this);
+              }
+            }
+            </code>
+            </remarks>
+        </member>
+        <member name="M:C1.Util.Licensing.ProviderInfo.Validate(System.Type,System.Object,System.Reflection.Assembly,System.String)">
+            <summary>
+            Version of Validate used by constructors that take runtime keys.
+            </summary>
+            <param name="type">Type of licensed object (use typeof() and not GetType()).</param>
+            <param name="instance">Reference to the licensed object.</param>
+            <param name="callingAsm">Assembly that contains the owner licensed control.</param>
+            <param name="runtimeKey">Any valid C1 runtime key.</param>
+            <returns>A <see cref="T:C1.Util.Licensing.LicenseInfo" /> with information about the runtime key.</returns>
+            <remarks>
+                <para>This allows a licensed C1 class to create other C1 objects bypassing 
+            license verification for the child objects.</para>
+                <para>For extra safety, we check that the owner object is defined in an assembly
+            the contains a 'C1ProductInfo' attribute.</para>
+            </remarks>
+        </member>
+        <member name="M:C1.Util.Licensing.ProviderInfo.ShowAboutBox(System.Object)">
+            <summary>
+            Shows the About Box for an instance of a C1 product.
+            </summary>
+        </member>
+        <member name="M:C1.Util.Licensing.ProviderInfo.GetC1Type(System.Object)">
+            <summary>
+            Get the type whose assembly contains a 'C1ProductInfoAttribute'.
+            </summary>
+            <param name="instance">Instance of an object whose type is to be checked.</param>
+            <returns>The type whose assembly contains a 'C1ProductInfoAttribute'</returns>
+        </member>
+        <member name="T:C1.Util.Licensing.LicenseInfo">
+            <summary>
+            Contains information about a license stored in an application.
+            </summary>
+        </member>
+        <member name="T:C1.Util.Licensing.C1AboutNameAttribute">
+            <summary>
+            Attribute used to specify the product name shown on the About Box.
+            </summary>
+        </member>
+        <member name="T:C1.Util.Licensing.C1ProductInfoAttribute">
+            <summary>
+            Attribute used to attach licensing/product information to assemblies.
+            </summary>
+        </member>
+        <member name="T:C1.Util.Licensing.ProviderInfoWPF">
+            <summary>
+            Helper class to implement Licensing for WPF classes.
+            This should be used only in WPF projects.
+            </summary>
+        </member>
+        <member name="M:C1.Util.Licensing.ProviderInfoWPF.Validate(System.Type,System.Windows.FrameworkElement,System.Boolean,System.Boolean)">
+            <summary>
+            Perform license validation. Call this method from the licensed object's 
+            constructor to save a license key at design time, validate it at runtime, 
+            and display a nag dialog if a valid license is not found.
+            <param name="type">Type of licensed object (use typeof() and not GetType()).</param><param name="instance">Reference to the licensed object.</param><param name="testDomain">Whether to test for an IdeDomainManager (ASP.NET design time that looks like runtime).</param><param name="showNag">Whether to show nag screen or it will be handled from some other place.</param><returns>A <see cref="T:C1.Util.Licensing.LicenseInfo" /> object that contains information about the license.</returns></summary>
+        </member>
+        <member name="M:C1.Util.Licensing.ProviderInfoWPFEnt.Validate(System.Type,System.Windows.FrameworkElement,System.Boolean)">
+            <summary>
+            Perform license validation. Call this method from the licensed object's 
+            constructor to save a license key at design time, validate it at runtime, 
+            and display a nag dialog if a valid license is not found.
+            <param name="type">Type of licensed object (use typeof() and not GetType()).</param><param name="instance">Reference to the licensed object.</param><param name="testDomain">Whether to test for an IdeDomainManager (ASP.NET design time that looks like runtime).</param><returns>A <see cref="T:C1.Util.Licensing.LicenseInfo" /> object that contains information about the license.</returns></summary>
+        </member>
+        <member name="M:C1.WPF.PlatformIndependent.C1LoadXaml``1(System.String)">
+            <summary>
+            [Platform safe] Parses a well-formed XAML fragment and creates a corresponding Silverlight
+            object tree, and returns the root of the object tree.
+            </summary>
+            <typeparam name="T">The type of the object to be parsed.</typeparam>
+            <param name="strXaml">String that contains a valid XAML fragment.</param>
+            <returns>The root object of the parsed Silverlight object tree.</returns>
+        </member>
+        <member name="M:C1.WPF.PlatformIndependent.IsInVisualTree(System.Windows.FrameworkElement)">
+            <summary>
+            [Platform safe] Determines whether the specified element is in visual tree.
+            </summary>
+            <param name="elem">The framework element.</param>
+            <returns>
+                <c>true</c> if the specified element is in visual tree; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:C1.WPF.PlatformIndependent.C1BeginInvoke(System.Windows.FrameworkElement,System.Action)">
+            <summary>
+            [Platform safe] Invokes the begin invoke accessing the Dispatcher of the framework element.
+            </summary>
+            <param name="elem">The elem.</param>
+            <param name="action">The action.</param>
+        </member>
+        <member name="M:C1.WPF.PlatformIndependent.C1GetLogicalFocusedElement(System.Windows.FrameworkElement)">
+            <summary>
+            [Platform safe] Returns a logical focused element from a focus scope where the specified
+            <paramref name="relativeToElement" /> is in.
+            </summary>
+            <param name="relativeToElement"></param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.WPF.PlatformIndependent.GetKeyboardFocusedElement">
+            <summary>
+            [Platform safe] Returns an element with a keyboard focus.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:C1.WPF.PlatformIndependent.C1GetPlatformKeyCode(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            [Platform safe] Gets platform key code from a KeyEventArgs.
+            </summary>
+            <param name="e">The <see cref="T:System.Windows.Input.KeyEventArgs" /> instance containing the event data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.WPF.PlatformIndependent.AdjustContentControlTemplate(System.Windows.Controls.ControlTemplate)">
+            <summary>
+            [Platform safe] Adjusts, if possible, a ControlTemplate intended for the 
+            ContentControl.Template property to make it functional in WPF, and returns a passed template
+            reference. Do nothing in Silverlight, just returns a passed template.
+            </summary>
+            <param name="template"></param>
+            <returns></returns>
+            <remarks>
+            This method resolves the following WPF specific problem: if a ControlTemplate assigned to the
+            ContentControl.Template property has a not assigned TargetType property then a ContentPresenter
+            element used in the template becomes non-functional. As a result an assignment of some UI to
+            the ContentControl.Content property has no effect.
+            <para>
+            This method checks the ControlTemplate.TargetType property and assign it with ContentControl
+            type if the property is not assigned yet.
+            </para><para>
+            Note that this method works only if the template is not sealed yet, which usually means that it
+            has not been applied somewhere at the moment. If the template is sealed then this method does 
+            nothing.
+            </para></remarks>
+        </member>
+        <member name="M:C1.WPF.PlatformIndependent.IsInDesignMode(System.Windows.DependencyObject)">
+            <summary>
+            [Platform safe] Gets an indication whether the specified object lives in a design-time environment.
+            </summary>
+            <param name="obj">
+            Object to check.
+            </param>
+            <returns>
+            True if object is in design-time mode; otherwise, false.
+            </returns>
+        </member>
+        <member name="P:C1.WPF.PlatformIndependent.IsWindowsPhoneDevice">
+            <summary>
+            Indicates whether the running device is windows phone device.
+            </summary>
+        </member>
+        <member name="T:C1.WPF.Theming.C1Theme">
+            <summary>
+            Base class for all the C1Themes.
+            Extends functionality of from Silverlight Toolkit Theme.
+            </summary>
+        </member>
+        <member name="M:C1.WPF.Theming.C1Theme.#ctor(System.Reflection.Assembly,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Theming.C1Theme" /> class with a
+            Microsoft Silverlight Toolkit theme as base.
+            </summary>
+            <param name="resAssembly">The assembly where both the embedded resource are.</param>
+            <param name="themeName">The name of the theme (the resource names will be calculated using standard nomenclature).</param>
+        </member>
+        <member name="M:C1.WPF.Theming.C1Theme.#ctor(System.Reflection.Assembly,System.String,System.Reflection.Assembly,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Theming.C1Theme" /> class with a
+            Microsoft Silverlight Toolkit theme as base and extending it with a
+            ResourceDictionary containing custom overrides.
+            </summary>
+            <param name="resAssembly">The assembly where the resources are.</param>
+            <param name="themeName">Name of the theme.</param>
+            <param name="assemblyOverrides">The assembly where the override definitions are.</param>
+            <param name="customOverrides">The custom overrides resource name.</param>
+        </member>
+        <member name="M:C1.WPF.Theming.C1Theme.#ctor(System.String,System.Uri,System.Reflection.Assembly,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Theming.C1Theme" /> class.
+            </summary>
+            <param name="assemblyName">Name of the assembly.</param>
+            <param name="themeUri">The URI where the theme resource can be found.</param>
+            <param name="assemblyOverrides">The assembly where the override definitions are.</param>
+            <param name="customOverrides">The custom overrides resource name.</param>
+        </member>
+        <member name="M:C1.WPF.Theming.C1Theme.#ctor(System.Reflection.Assembly,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Theming.C1Theme" /> class with a
+            Microsoft Silverlight Toolkit theme as base.
+            </summary>
+            <param name="assembly">The assembly where the resources are.</param>
+            <param name="overridesUri">The URI to the ResourceDictionary that overrides the generic definitions 
+            for the C1 controls.</param>
+            <param name="baseUri">The URI to a the ResourceDictionary that will be added to the the styles created for 
+            the C1 controls (i.e. any third party control, like the Silverlight basic controls).</param>
+        </member>
+        <member name="M:C1.WPF.Theming.C1Theme.#ctor(System.Reflection.Assembly,System.String,System.String,System.Reflection.Assembly,System.String)">
+            <summary>
+            This method is used for internal purposes.
+            </summary>
+            <param name="resAssembly"></param>
+            <param name="themeName"></param>
+            <param name="nsLastName"></param>
+            <param name="assemblyOverrides"></param>
+            <param name="customOverrides"></param>
+        </member>
+        <member name="M:C1.WPF.Theming.C1Theme.#ctor(System.IO.Stream)">
+            <summary>
+            This method is used for internal purposes.
+            </summary>
+            <param name="themeResourceStream"></param>
+        </member>
+        <member name="M:C1.WPF.Theming.C1Theme.C1ResName(System.String,System.String)">
+            <summary>
+            This method is used for internal purposes.
+            </summary>
+        </member>
+        <member name="M:C1.WPF.Theming.C1Theme.GetDocument(System.Reflection.Assembly,System.String)">
+            <summary>
+            Get a XML document stored as an Embedded Resource
+            </summary>
+            <param name="assembly">The assembly.</param>
+            <param name="resourceName">Full resource key.</param>
+            <returns>XML document</returns>
+        </member>
+        <member name="M:C1.WPF.Theming.C1Theme.GetCurrentThemeResources(System.Windows.FrameworkElement)">
+            <summary>
+            Gets the resources currently attached to a specified FrameworkElement.
+            </summary>
+            <param name="element">The FrameworkElement from which the current attached 
+            resources needs to be read.</param>
+            <returns></returns>
+        </member>
+        <member name="M:C1.WPF.Theming.C1Theme.ApplyTheme(System.Windows.FrameworkElement,System.Windows.ResourceDictionary)">
+            <summary>
+            Sets the current theme resources for a specified FrameworkElement.
+            </summary>
+            <param name="element">The FrameworkElement to which the attached resources are written.</param>
+            <param name="value">The needed ResourceDictionary value.</param>
+        </member>
+        <member name="M:C1.WPF.Theming.C1Theme.ApplyTheme(System.Windows.FrameworkElement,C1.WPF.Theming.Theme)">
+            <summary>
+            Applies the theme for a specified FrameworkElement.
+            </summary>
+            <param name="element">The FrameworkElement to which the Theme will be applied.</param>
+            <param name="theme">The theme.</param>
+        </member>
+        <member name="M:C1.WPF.Theming.C1Theme.Apply(System.Windows.FrameworkElement)">
+            <summary>
+            Applies this C1Theme to the specified element.
+            </summary>
+            <param name="element">The FrameworkElement to which the C1Theme will be applied.</param>
+        </member>
+        <member name="M:C1.WPF.Theming.C1Theme.OnLoadingError(System.Collections.Generic.IList{System.String},C1.WPF.Theming.C1Theme)">
+            <summary>
+            This method is used for internal purposes.
+            </summary>
+        </member>
+        <member name="E:C1.WPF.Theming.C1Theme.LoadingError">
+            <summary>
+            Occurs when an error occurred loading a given theme.
+            </summary>
+            <remarks>
+                <see cref="T:C1.WPF.Theming.C1Theme" /> resources are composed by the original resources and a set of overrides
+            that apply over the original keys. The merge is done in runtime, and that's why errors might occur.
+            </remarks>
+        </member>
+        <member name="P:C1.WPF.Theming.C1Theme.InheritedTypes">
+            <summary>
+            Gets a collection where types that inherit from themed controls can be added to use the theme of its base type.
+            </summary>
+        </member>
+        <member name="T:C1.WPF.Theming.C1ThemeLoadingErrorEventArgs">
+            <summary>
+            Event args used for the <see cref="E:C1.WPF.Theming.C1Theme.LoadingError" /> event.
+            </summary>
+        </member>
+        <member name="P:C1.WPF.Theming.C1ThemeLoadingErrorEventArgs.Errors">
+            <summary>
+            Gets the list of errors.
+            </summary>
+            <value>The errors.</value>
+        </member>
+        <member name="P:C1.WPF.Theming.C1ThemeLoadingErrorEventArgs.Theme">
+            <summary>
+            Gets the <see cref="T:C1.WPF.Theming.C1Theme" />.
+            </summary>
+            <value>The theme.</value>
+        </member>
+        <member name="T:C1.WPF.Theming.C1ThemePart">
+            <summary>
+            Specifies the location of a resource that is part of a <see cref="T:C1.WPF.Theming.C1Theme" />.
+            </summary>
+        </member>
+        <member name="P:C1.WPF.Theming.C1ThemePart.Assembly">
+            <summary>
+            Gets or sets the assembly.
+            </summary>
+            <value>The assembly.</value>
+        </member>
+        <member name="P:C1.WPF.Theming.C1ThemePart.UriSource">
+            <summary>
+            Gets or sets the URI source.
+            </summary>
+            <value>The URI source.</value>
+        </member>
+        <member name="T:C1.WPF.Theming.C1ThemeParts">
+            <summary>
+            List of parts required to create a <see cref="T:C1.WPF.Theming.C1Theme" />.
+            </summary>
+        </member>
+        <member name="P:C1.WPF.Theming.C1ThemeParts.After">
+            <summary>
+            Gets or sets the resources applied before the merged generic.
+            </summary>
+            <value>The c1 parts.</value>
+        </member>
+        <member name="P:C1.WPF.Theming.C1ThemeParts.Before">
+            <summary>
+            Gets or sets the resources to be applied before the merged generic.
+            </summary>
+            <value>The external.</value>
+        </member>
+        <member name="T:C1.WPF.Theming.Primitives.Graph`1">
+            <summary>
+            Represents a graph.  A graph is an arbitrary collection of GraphNode instances.
+            </summary>
+            <typeparam name="T">The type of data stored in the graph's nodes.</typeparam>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.Graph`1.AddNode(C1.WPF.Theming.Primitives.GraphNode{`0})">
+            <summary>
+            Adds a new GraphNode instance to the Graph
+            </summary>
+            <param name="node">The GraphNode instance to add.</param>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.Graph`1.AddNode(`0)">
+            <summary>
+            Adds a new value to the graph.
+            </summary>
+            <param name="value">The value to add to the graph</param>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.Graph`1.AddDirectedEdge(`0,`0)">
+            <summary>
+            Adds a directed edge from a GraphNode with one value (from) to a GraphNode with another value (to).
+            </summary>
+            <param name="from">The value of the GraphNode from which the directed edge eminates.</param>
+            <param name="to">The value of the GraphNode to which the edge leads.</param>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.Graph`1.AddDirectedEdge(C1.WPF.Theming.Primitives.GraphNode{`0},C1.WPF.Theming.Primitives.GraphNode{`0})">
+            <summary>
+            Adds a directed edge from one GraphNode (from) to another (to).
+            </summary>
+            <param name="from">The GraphNode from which the directed edge eminates.</param>
+            <param name="to">The GraphNode to which the edge leads.</param>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.Graph`1.AddDirectedEdge(C1.WPF.Theming.Primitives.GraphNode{`0},C1.WPF.Theming.Primitives.GraphNode{`0},System.Int32)">
+            <summary>
+            Adds a directed edge from one GraphNode (from) to another (to) with an associated cost.
+            </summary>
+            <param name="from">The GraphNode from which the directed edge eminates.</param>
+            <param name="to">The GraphNode to which the edge leads.</param>
+            <param name="cost">The cost of the edge from "from" to "to".</param>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.Graph`1.AddDirectedEdge(`0,`0,System.Int32)">
+            <summary>
+            Adds a directed edge from a GraphNode with one value (from) to a GraphNode with another value (to)
+            with an associated cost.
+            </summary>
+            <param name="from">The value of the GraphNode from which the directed edge eminates.</param>
+            <param name="to">The value of the GraphNode to which the edge leads.</param>
+            <param name="cost">The cost of the edge from "from" to "to".</param>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.Graph`1.AddUndirectedEdge(`0,`0)">
+            <summary>
+            Adds an undirected edge from a GraphNode with one value (from) to a GraphNode with another value (to).
+            </summary>
+            <param name="from">The value of one of the GraphNodes that is joined by the edge.</param>
+            <param name="to">The value of one of the GraphNodes that is joined by the edge.</param>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.Graph`1.AddUndirectedEdge(C1.WPF.Theming.Primitives.GraphNode{`0},C1.WPF.Theming.Primitives.GraphNode{`0})">
+            <summary>
+            Adds an undirected edge from one GraphNode to another.
+            </summary>
+            <param name="from">One of the GraphNodes that is joined by the edge.</param>
+            <param name="to">One of the GraphNodes that is joined by the edge.</param>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.Graph`1.AddUndirectedEdge(C1.WPF.Theming.Primitives.GraphNode{`0},C1.WPF.Theming.Primitives.GraphNode{`0},System.Int32)">
+            <summary>
+            Adds an undirected edge from one GraphNode to another with an associated cost.
+            </summary>
+            <param name="from">One of the GraphNodes that is joined by the edge.</param>
+            <param name="to">One of the GraphNodes that is joined by the edge.</param>
+            <param name="cost">The cost of the undirected edge.</param>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.Graph`1.AddUndirectedEdge(`0,`0,System.Int32)">
+            <summary>
+            Adds an undirected edge from a GraphNode with one value (from) to a GraphNode with another value (to)
+            with an associated cost.
+            </summary>
+            <param name="from">The value of one of the GraphNodes that is joined by the edge.</param>
+            <param name="to">The value of one of the GraphNodes that is joined by the edge.</param>
+            <param name="cost">The cost of the undirected edge.</param>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.Graph`1.Clear">
+            <summary>
+            Clears out the contents of the Graph.
+            </summary>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.Graph`1.Contains(`0)">
+            <summary>
+            Returns a Boolean, indicating if a particular value exists within the graph.
+            </summary>
+            <param name="value">The value to search for.</param>
+            <returns>True if the value exist in the graph; false otherwise.</returns>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.Graph`1.Remove(`0)">
+            <summary>
+            Attempts to remove a node from a graph.
+            </summary>
+            <param name="value">The value that is to be removed from the graph.</param>
+            <returns>True if the corresponding node was found, and removed; false if the value was not
+            present in the graph.</returns>
+            <remarks>This method removes the GraphNode instance, and all edges leading to or from the
+            GraphNode.</remarks>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.Graph`1.GetEnumerator">
+            <summary>
+            Returns an enumerator that allows for iterating through the contents of the graph.
+            </summary>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.Graph`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that allows for iterating through the contents of the graph.
+            </summary>
+        </member>
+        <member name="P:C1.WPF.Theming.Primitives.Graph`1.Nodes">
+            <summary>
+            Returns the set of nodes in the graph.
+            </summary>
+        </member>
+        <member name="P:C1.WPF.Theming.Primitives.Graph`1.Count">
+            <summary>
+            Returns the number of vertices in the graph.
+            </summary>
+        </member>
+        <member name="T:C1.WPF.Theming.Primitives.GraphNode`1">
+            <summary>
+            Represents a node in a graph.  A graph node contains some piece of data, along with a set of
+            neighbors.  There can be an optional cost between a graph node and each of its neighbors.
+            </summary>
+            <typeparam name="T">The type of data stored in the graph node.</typeparam>
+        </member>
+        <member name="P:C1.WPF.Theming.Primitives.GraphNode`1.Neighbors">
+            <summary>
+            Returns the set of neighbors for this graph node.
+            </summary>
+        </member>
+        <member name="P:C1.WPF.Theming.Primitives.GraphNode`1.Costs">
+            <summary>
+            Returns the set of costs for the edges eminating from this graph node.
+            The k<sup>th</sup> cost (Cost[k]) represents the cost from the graph node to the node
+            represented by its k<sup>th</sup> neighbor (Neighbors[k]).
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.MergeSession.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:C1.WPF.Theming.Primitives.MergeSession" /> class.
+            </summary>
+        </member>
+        <member name="P:C1.WPF.Theming.Primitives.MergeSession.Errors">
+            <summary>
+            Gets or sets the errors.
+            </summary>
+            <value>The errors.</value>
+        </member>
+        <member name="P:C1.WPF.Theming.Primitives.MergeSession.Dependencies">
+            <summary>
+            Gets the dependencies between each node in the merged Resource Dictionary.
+            </summary>
+            <value>A graph of dependencies.</value>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.MergeSession.Add(System.Xml.Linq.XDocument,System.String,System.String)">
+            <summary>
+            Merges into the session the specified doc.
+            (adds elements and namespaces)
+            </summary>
+            <param name="doc">The doc.</param>
+            <param name="docName">Name of the doc.</param>
+            <param name="assemblyName">Name of the assembly.</param>
+        </member>
+        <member name="P:C1.WPF.Theming.Primitives.MergeSession.MergedDocument">
+            <summary>
+            Gets the current the merged document.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.MiscUtils.UnwrapXType(System.String)">
+            <summary>
+            If string is in the form of "{x:Type type_name}" then returns type_name; otherwise,
+            returns the passed string. 
+            </summary>
+            <param name="typeRef"></param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.WPF.Theming.Primitives.Node`1">
+            <summary>
+            The Node&lt;T&gt; class represents the base concept of a Node for a tree or graph.  It contains
+            a data item of type T, and a list of neighbors.
+            </summary>
+            <typeparam name="T">The type of data contained in the Node.</typeparam>
+            <remarks>None of the classes in the SkmDataStructures2 namespace use the Node class directly;
+            they all derive from this class, adding necessary functionality specific to each data structure.</remarks>
+        </member>
+        <member name="T:C1.WPF.Theming.Primitives.NodeList`1">
+            <summary>
+            Represents a collection of Node&lt;T&gt; instances.
+            </summary>
+            <typeparam name="T">The type of data held in the Node instances referenced by this class.</typeparam>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.NodeList`1.FindByValue(`0)">
+            <summary>
+            Searches the NodeList for a Node containing a particular value.
+            </summary>
+            <param name="value">The value to search for.</param>
+            <returns>The Node in the NodeList, if it exists; null otherwise.</returns>
+        </member>
+        <member name="T:C1.WPF.Theming.Primitives.ResourceItem">
+            <summary>
+            Class representing an item in a ResourceDictionary 
+            </summary>
+        </member>
+        <member name="T:C1.WPF.Theming.Primitives.ResourcesGraph">
+            <summary>
+            Adds Dictionary for fast retrieval of nodes using the key.
+            </summary>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.XDocumentExtensions.AddNamespace(System.Xml.Linq.XDocument,System.String,System.String)">
+            <summary>
+            Adds a namespace to the Document Root.
+            </summary>
+            <param name="doc">The doc.</param>
+            <param name="localName">Local name for the namespace.</param>
+            <param name="namespaceValue">The namespace value.</param>
+        </member>
+        <member name="M:C1.WPF.Theming.Primitives.XDocumentExtensions.ToMemoryStream(System.Xml.Linq.XDocument)">
+            <summary>
+            Creates a readable MemoryStream containing the xml document
+            </summary>
+            <param name="doc">The doc.</param>
+            <returns></returns>
+        </member>
+        <member name="T:C1.WPF.Theming.C1ResourceNotFoundException">
+            <summary>
+            Exception thrown when resource is not found.
+            </summary>
+        </member>
+        <member name="P:C1.WPF.Theming.C1ResourceNotFoundException.Uri">
+            <summary>
+            Gets the uri of the resource that could not be found.
+            </summary>
+        </member>
+        <member name="M:C1.WPF.Theming.C1ResourceNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the ResourceNotFoundException class.
+            </summary>
+        </member>
+        <member name="M:C1.WPF.Theming.C1ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the ResourceNotFoundException class.
+            </summary>
+            <param name="message">The exception message.</param>
+        </member>
+        <member name="M:C1.WPF.Theming.C1ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the ResourceNotFoundException class.
+            </summary>
+            <param name="message">The exception message.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+        <member name="M:C1.WPF.Theming.C1ResourceNotFoundException.#ctor(System.String,System.Uri)">
+            <summary>
+            Initializes a new instance of the ResourceNotFoundException class.
+            </summary>
+            <param name="message">The exception message.</param>
+            <param name="uri">The uri of the resource.</param>
+        </member>
+        <member name="M:C1.WPF.Theming.C1ResourceNotFoundException.#ctor(System.String,System.Uri,System.Exception)">
+            <summary>
+            Initializes a new instance of the ResourceNotFoundException class.
+            </summary>
+            <param name="message">The exception message.</param>
+            <param name="uri">The uri of the resource.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+        <member name="T:C1.WPF.Theming.Theme">
+            <summary>
+            Implicitly applies a set of styles to all descendent FrameworkElements.
+            </summary>
+            <QualityBand>Preview</QualityBand>
+        </member>
+        <member name="M:C1.WPF.Theming.Theme.#ctor">
+            <summary>
+            Initializes a new instance of the Theme class.
+            </summary>
+        </member>
+        <member name="M:C1.WPF.Theming.Theme.#ctor(System.Reflection.Assembly,System.String)">
+            <summary>
+            Initializes a new instance of the Theme class.
+            </summary>
+            <param name="themeAssembly">
+            Assembly with the embedded resource containing the theme to apply.
+            </param>
+            <param name="themeResourceName">
+            Name of the embedded resource containing the theme to apply.
+            </param>
+        </member>
+        <member name="M:C1.WPF.Theming.Theme.#ctor(System.IO.Stream)">
+            <summary>
+            Initializes a new instance of the Theme class.
+            </summary>
+            <param name="themeResourceStream">
+            A resource stream containing the theme to apply.
+            </param>
+        </member>
+        <member name="T:C1.Silverlight.Theming.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Theming.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Theming.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Theming.Properties.Resources.InvalidResourceException_UnableToLoadResources">
+            <summary>
+              Looks up a localized string similar to Unable to load resources..
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Theming.Properties.Resources.ResourceParser_CanOnlyParseXAMLFilesWithResourceDictionaryAsTheRootElement">
+            <summary>
+              Looks up a localized string similar to Cannot parse XAML files which do not have a ResourceDictionary as the root element..
+            </summary>
+        </member>
+        <member name="P:C1.Silverlight.Theming.Properties.Resources.Theme_ResourceNotFound">
+            <summary>
+              Looks up a localized string similar to Resource not found at '{0}'..
+            </summary>
+        </member>
+        <member name="F:Public.RunTimeNameSuffix">
+            <summary>
+            Defines the WPF platform specific suffix of a run-time assembly name.
+            </summary>
+        </member>
+        <member name="F:Public.DesignTimeNet4NameSuffix">
+            <summary>
+            Defines the WPF platform specific suffix of a VS2010/Blend3-4 design-time assembly name.
+            </summary>
+        </member>
+        <member name="F:Public.DesignTimeNet45NameSuffix">
+            <summary>
+            Defines the WPF platform specific suffix of a VS2012 design-time assembly name.
+            </summary>
+        </member>
+    </members>
+</doc>

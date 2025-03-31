@@ -1,0 +1,34 @@
+C:\Users\acer\source\repos\filecriptwpf\filecriptwpf\obj\Release\filecriptwpf.csproj.AssemblyReference.cache
+C:\Users\acer\source\repos\filecriptwpf\filecriptwpf\obj\Release\MainWindow.g.cs
+C:\Users\acer\source\repos\filecriptwpf\filecriptwpf\obj\Release\App.g.cs
+C:\Users\acer\source\repos\filecriptwpf\filecriptwpf\obj\Release\App.baml
+C:\Users\acer\source\repos\filecriptwpf\filecriptwpf\obj\Release\MainWindow.baml
+C:\Users\acer\source\repos\filecriptwpf\filecriptwpf\obj\Release\filecriptwpf.Properties.Resources.resources
+C:\Users\acer\source\repos\filecriptwpf\filecriptwpf\obj\Release\filecriptwpf.csproj.GenerateResource.cache
+C:\Users\acer\source\repos\filecriptwpf\filecriptwpf\obj\Release\filecriptwpf.csproj.CoreCompileInputs.cache
+C:\Users\acer\source\repos\filecriptwpf\filecriptwpf\obj\Release\Styles.baml
+C:\Users\acer\source\repos\filecriptwpf\filecriptwpf\bin\Release\filecryptwpf.exe.config
+C:\Users\acer\source\repos\filecriptwpf\filecriptwpf\bin\Release\filecryptwpf.exe
+C:\Users\acer\source\repos\filecriptwpf\filecriptwpf\bin\Release\filecryptwpf.pdb
+C:\Users\acer\source\repos\filecriptwpf\filecriptwpf\obj\Release\filecryptwpf_MarkupCompile.cache
+C:\Users\acer\source\repos\filecriptwpf\filecriptwpf\obj\Release\filecryptwpf_MarkupCompile.lref
+C:\Users\acer\source\repos\filecriptwpf\filecriptwpf\obj\Release\filecryptwpf.g.resources
+C:\Users\acer\source\repos\filecriptwpf\filecriptwpf\obj\Release\filecryptwpf.exe
+C:\Users\acer\source\repos\filecriptwpf\filecriptwpf\obj\Release\filecryptwpf.pdb
+C:\Users\acer\source\repos\filecriptwpf en\filecriptwpf\bin\Release\filecryptwpf.exe.config
+C:\Users\acer\source\repos\filecriptwpf en\filecriptwpf\bin\Release\filecryptwpf.exe
+C:\Users\acer\source\repos\filecriptwpf en\filecriptwpf\bin\Release\filecryptwpf.pdb
+C:\Users\acer\source\repos\filecriptwpf en\filecriptwpf\obj\Release\filecriptwpf.csproj.AssemblyReference.cache
+C:\Users\acer\source\repos\filecriptwpf en\filecriptwpf\obj\Release\Styles.baml
+C:\Users\acer\source\repos\filecriptwpf en\filecriptwpf\obj\Release\MainWindow.g.cs
+C:\Users\acer\source\repos\filecriptwpf en\filecriptwpf\obj\Release\App.g.cs
+C:\Users\acer\source\repos\filecriptwpf en\filecriptwpf\obj\Release\filecryptwpf_MarkupCompile.cache
+C:\Users\acer\source\repos\filecriptwpf en\filecriptwpf\obj\Release\filecryptwpf_MarkupCompile.lref
+C:\Users\acer\source\repos\filecriptwpf en\filecriptwpf\obj\Release\App.baml
+C:\Users\acer\source\repos\filecriptwpf en\filecriptwpf\obj\Release\MainWindow.baml
+C:\Users\acer\source\repos\filecriptwpf en\filecriptwpf\obj\Release\filecryptwpf.g.resources
+C:\Users\acer\source\repos\filecriptwpf en\filecriptwpf\obj\Release\filecriptwpf.Properties.Resources.resources
+C:\Users\acer\source\repos\filecriptwpf en\filecriptwpf\obj\Release\filecriptwpf.csproj.GenerateResource.cache
+C:\Users\acer\source\repos\filecriptwpf en\filecriptwpf\obj\Release\filecriptwpf.csproj.CoreCompileInputs.cache
+C:\Users\acer\source\repos\filecriptwpf en\filecriptwpf\obj\Release\filecryptwpf.exe
+C:\Users\acer\source\repos\filecriptwpf en\filecriptwpf\obj\Release\filecryptwpf.pdb
