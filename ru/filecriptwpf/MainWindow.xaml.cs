@@ -110,7 +110,7 @@ namespace filecriptwpf
 
         private void Button_Click_decript(object sender, RoutedEventArgs e)
         {
-            DataEntry(2);
+            _ = DataEntry(2);
         }
 
         private void SelectFile_Click(object sender, RoutedEventArgs e)
@@ -131,7 +131,7 @@ namespace filecriptwpf
 
         private void Button_Click_encript(object sender, RoutedEventArgs e)
         {
-            DataEntry(1);
+            _= DataEntry(1);
         }
     }
 }
