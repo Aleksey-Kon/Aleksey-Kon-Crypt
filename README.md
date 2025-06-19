@@ -7,15 +7,24 @@
 ## ⚙️ Features
 
 - Encrypts small files with a multi-stage algorithm:
-  1. 3DES encryption
-  2. AES encryption
-  3. Byte shuffling & XOR operation
+  - Step 1. 3DES encryption
+  - Step 2. AES encryption
+  - Step 3. Byte shuffling & XOR operation
 - Clean and modern interface styled after Windows 11
 
 ## ⚠️ Limitations
 
 - **Not suitable for large files**: performance and reliability degrade with files larger than **500 MB**
-- **Still under development** — not publicly released yet
+
+## 🚧 Project Status: Archived
+
+This project is currently **archived** and is **not actively maintained**.
+
+There are **no planned updates or new features** at this time.  
+The code is available for educational or non-commercial use.
+
+Feel free to explore, but keep in mind that it may contain bugs or limitations that won't be fixed.
+
 
 ## ❗ Disclaimer
 
